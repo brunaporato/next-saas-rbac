@@ -4,18 +4,17 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint": "turbo lint"
   },
   "devDependencies": {
-    "@saas/eslint-config": "workspace:*",
-    "@saas/typescript-config": "workspace:*",
-    "prettier": "^3.2.5",
-    "turbo": "^2.0.14",
-    "typescript": "^5.4.5"
+    "eslint": "8.57.0",
+    "turbo": "^2.0.14"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "next-saas-rbac": "file:"
   }
 }
