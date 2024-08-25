@@ -1,0 +1,13 @@
+{
+  "name": "@saas/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@repo/typescript-config": "file:",
+    "@saas/typescript-config": "file:"
+  }
+}
