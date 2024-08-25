@@ -46,12 +46,21 @@ importers:
 
   config/typescript-config:
     dependencies:
-      '@repo/typescript-config':
+      '@saas/tsconfig':
         specifier: 'file:'
         version: 'link:'
-      '@saas/typescript-config':
-        specifier: 'file:'
-        version: 'link:'
+
+  packages/auth:
+    devDependencies:
+      '@saas/eslint-config':
+        specifier: workspace:*
+        version: link:../../config/eslint-config
+      '@saas/prettier':
+        specifier: workspace:*
+        version: link:../../config/prettier
+      '@saas/tsconfig':
+        specifier: workspace:*
+        version: link:../../config/typescript-config
 
 packages:
 

@@ -6,9 +6,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "library.json"
+  ],
   "dependencies": {
-    "@repo/typescript-config": "file:",
-    "@saas/tsconfig": "file:",
-    "@saas/typescript-config": "file:"
+    "@saas/tsconfig": "file:"
   }
 }
