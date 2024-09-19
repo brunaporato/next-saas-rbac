@@ -8,7 +8,8 @@
   },
   "files": [
     "library.json",
-    "node.json"
+    "node.json",
+    "nextjs.json"
   ],
   "dependencies": {
     "@saas/tsconfig": "file:"
