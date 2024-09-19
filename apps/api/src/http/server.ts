@@ -39,6 +39,7 @@ import { deleteProject } from './routes/projects/delete-project'
 import { getProject } from './routes/projects/get-project'
 import { getProjects } from './routes/projects/get-projects'
 import { updateProject } from './routes/projects/update-project'
+import { getPendingInvites } from "./routes/invites/get-pending-invites"
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
@@ -107,6 +108,7 @@ app.register(getInvites)
 app.register(acceptInvite)
 app.register(rejectInvite)
 app.register(revokeInvite)
+app.register(getPendingInvites)
 
 app.listen({ port: env.SERVER_PORT }).then(() => {
   console.log('HTTP server running on port 3333 🚀')
