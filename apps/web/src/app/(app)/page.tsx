@@ -1,5 +1,4 @@
-import { auth } from '@/auth/auth'
-import { Header } from "@/components/header"
+import { Header } from '@/components/header'
 
 export default async function Home() {
   return (
