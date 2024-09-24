@@ -26,7 +26,8 @@
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "web": "file:",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@saas/auth": "workspace:*"
   },
   "devDependencies": {
     "@saas/eslint-config": "workspace:*",

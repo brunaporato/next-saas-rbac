@@ -106,6 +106,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.8)(react@19.0.0-rc-f994737d14-20240522)
+      '@saas/auth':
+        specifier: workspace:*
+        version: link:../../packages/auth
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -141,7 +144,7 @@ importers:
         version: 1.0.7(tailwindcss@3.4.12)
       web:
         specifier: 'file:'
-        version: 'link:'
+        version: file:apps/web(@babel/core@7.25.2)(@types/react-dom@18.3.0)(@types/react@18.3.8)(tailwindcss@3.4.12)(typescript@5.5.4)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -522,7 +525,6 @@ packages:
   '@esbuild/win32-x64@0.23.1':
     resolution: {integrity: sha512-BHpFFeslkWrXWyUPnbKm+xYYVYruCinGcftSBaa8zoF9hZO4BcSCFUvHVTtzpIY6YzUnYtuEhZ+C9iEXjxnasg==}
     engines: {node: '>=18'}
-    cpu: [x64]
     os: [win32]
 
   '@eslint-community/eslint-utils@4.4.0':
@@ -3383,6 +3385,9 @@ packages:
   web-streams-polyfill@3.3.3:
     resolution: {integrity: sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==}
     engines: {node: '>= 8'}
+
+  web@file:apps/web:
+    resolution: {directory: apps/web, type: directory}
 
   which-boxed-primitive@1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}
@@ -6774,6 +6779,39 @@ snapshots:
       defaults: 1.0.4
 
   web-streams-polyfill@3.3.3: {}
+
+  web@file:apps/web(@babel/core@7.25.2)(@types/react-dom@18.3.0)(@types/react@18.3.8)(tailwindcss@3.4.12)(typescript@5.5.4):
+    dependencies:
+      '@radix-ui/react-avatar': 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522))(react@19.0.0-rc-f994737d14-20240522)
+      '@radix-ui/react-dropdown-menu': 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522))(react@19.0.0-rc-f994737d14-20240522)
+      '@radix-ui/react-label': 2.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522))(react@19.0.0-rc-f994737d14-20240522)
+      '@radix-ui/react-separator': 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.8)(react-dom@19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522))(react@19.0.0-rc-f994737d14-20240522)
+      '@radix-ui/react-slot': 1.1.0(@types/react@18.3.8)(react@19.0.0-rc-f994737d14-20240522)
+      '@saas/auth': link:packages/auth
+      class-variance-authority: 0.7.0
+      clsx: 2.1.1
+      cookies-next: 4.2.1
+      ky: 1.7.2
+      lucide-react: 0.441.0(react@19.0.0-rc-f994737d14-20240522)
+      next: 15.0.0-rc.0(@babel/core@7.25.2)(react-dom@19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522))(react@19.0.0-rc-f994737d14-20240522)
+      react: 19.0.0-rc-f994737d14-20240522
+      react-dom: 19.0.0-rc-f994737d14-20240522(react@19.0.0-rc-f994737d14-20240522)
+      shadcn-ui: 0.9.1(typescript@5.5.4)
+      tailwind-merge: 2.5.2
+      tailwindcss-animate: 1.0.7(tailwindcss@3.4.12)
+      zod: 3.23.8
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@opentelemetry/api'
+      - '@playwright/test'
+      - '@types/react'
+      - '@types/react-dom'
+      - babel-plugin-macros
+      - babel-plugin-react-compiler
+      - sass
+      - supports-color
+      - tailwindcss
+      - typescript
 
   which-boxed-primitive@1.0.2:
     dependencies:
